@@ -13,7 +13,7 @@ Many developers can upload a website to AWS S3, but often overlook three critica
 
 - Monitoring: Tracking access and anomalies to ensure reliability
 
-Why This Matters?
+**Why This Matters?**
 
 In real-world applications, slow or unsecured sites can lead to:
 
@@ -23,7 +23,7 @@ In real-world applications, slow or unsecured sites can lead to:
 
 - No visibility into issues due to lack of monitoring
 
-What We've Done
+**What We've Done:**
 
 This project hosts a static Website using:
 
@@ -47,3 +47,50 @@ This project hosts a static Website using:
 | **AWS WAF**       | Blocking bots, malicious traffic, SQLi, and XSS attempts         |
 | **CloudWatch**    | Monitoring CloudFront requests and WAF activity                  |
 | **ACM (planned)** | Enabling HTTPS using SSL certificates (skipped due to no domain) |
+
+# 🧱 4. Implementation Steps
+Here’s a breakdown of each step with what was done:
+
+**1. Upload Website to S3**
+
+Created a new S3 bucket with public access enabled.
+
+Uploaded index.html and assets (CSS, JS, images).
+
+Enabled Static Website Hosting.
+
+Made bucket content publicly accessible with proper bucket policy.
+
+**2. Connect to CloudFront**
+
+Created a CloudFront distribution pointing to S3 static hosting endpoint.
+
+Set Viewer Protocol Policy to “Redirect HTTP to HTTPS”.
+
+Got a .cloudfront.net URL for global delivery.
+
+**3. Add Security via AWS WAF**
+
+Created a Web ACL and attached it to CloudFront.
+
+Added Core Rule Set, Anonymous IP Block, and SQL Injection filters.
+
+Created a rate-based rule to block traffic if request count from an IP exceeded 100 in 5 mins.
+
+**4. Monitor with CloudWatch**
+
+Created a custom dashboard.
+
+Added widgets for:
+
+Allowed requests
+
+Cache hits and misses
+
+WAF blocked requests
+
+Observed real-time and historical traffic patterns.
+
+**5. (Optional ACM Step Skipped)**
+
+Skipped due to no custom domain. But in production, ACM + Route 53 + HTTPS redirect would be crucial.
