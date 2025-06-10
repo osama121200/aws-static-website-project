@@ -17,8 +17,8 @@ Why This Matters?
 
 In real-world applications, slow or unsecured sites can lead to:
 
-User drop-off and bounce rates
+- User drop-off and bounce rates
 
-Vulnerabilities to hackers or bots
+- Vulnerabilities to hackers or bots
 
-No visibility into issues due to lack of monitoring
+- No visibility into issues due to lack of monitoring
