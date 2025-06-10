@@ -94,3 +94,13 @@ Here’s a breakdown of each step with what was done:
 **5. (Optional ACM Step Skipped)**
 
 - Skipped due to no custom domain. But in production, ACM + Route 53 + HTTPS redirect would be crucial.
+
+# 🧠 5. Business Impact
+
+- **Speed:** CloudFront drastically reduced load time via caching and edge locations.
+
+- **Security:** WAF filtered bad bots, XSS, SQLi attempts — protecting the site from attacks.
+
+- **Scalability:** S3 + CloudFront scales automatically with traffic.
+
+- **Monitoring:** CloudWatch gave full visibility, allowing proactive response to anomalies.
