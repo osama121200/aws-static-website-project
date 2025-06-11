@@ -99,7 +99,7 @@ Here’s a breakdown of each step with what was done:
 
 - **Speed:** CloudFront drastically reduced load time via caching and edge locations.
 
-- **Security:** WAF filtered bad bots, XSS, SQLi attempts — protecting the site from attacks.
+- **Security:** WAF filtered bad bots, XSS, SQLi attempts, protecting the site from attacks.
 
 - **Scalability:** S3 + CloudFront scales automatically with traffic.
 
