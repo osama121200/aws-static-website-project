@@ -104,3 +104,6 @@ Here’s a breakdown of each step with what was done:
 - **Scalability:** S3 + CloudFront scales automatically with traffic.
 
 - **Monitoring:** CloudWatch gave full visibility, allowing proactive response to anomalies.
+
+![CloudFront Settings](images/S3 website hosting.png)
+
